@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+50.times do |variable|
+  Book.create([{
+  	title: Faker::Book.title,
+  	author: Faker::Book.author,
+  	genre: Faker::Book.genre,
+    classification: "Fiction",
+  	year: Faker::Number.between(1870, 2017)
+  	}])
+end

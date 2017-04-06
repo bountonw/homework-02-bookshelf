@@ -1,1 +1,11 @@
-<i>This is my home page</i>
+<h1>My list of books</h1>
+
+<% @books.each do |book| %>
+  <div class="booyah-box col-10 offset-1">
+    <h1><%= link_to book.title, book_path(book) %></h1>
+    <i><%= book.author %></i><br /> 
+    <%= book.genre %>, &nbsp;<%= book.classification %>
+    <p><%= book.year %> </p>
+		<br />
+  </div>
+<% end %>

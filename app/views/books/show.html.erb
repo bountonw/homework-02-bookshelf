@@ -1,0 +1,11 @@
+
+  <div class="booyah-box col-10 offset-1">
+    <h1><%= link_to @book.title, book_path(@book) %></h1>
+    <i><%= @book.author %></i><br /> <br />
+    <p> <%= @book.genre %> </p>
+		<p> <%= @book.classification %> </p><br />
+		<p> <%= @book.year %> </p>
+		 <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-primary' %>
+
+      <%= link_to 'Delete', book_path(@book), method: :delete, class: 'btn btn-danger' %>
+  </div>
