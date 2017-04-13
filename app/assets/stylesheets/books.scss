@@ -3,3 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "bootstrap";
+@import "font-awesome";
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+ul li.completed:before {
+  content: '✓';
+}
+
+li:first-child {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.incomplete {
+	font-size: large;
+	 color: red;
+}
+
+.incomplete:before {
+	content: 'X';
+}
+
+.assignment {
+  background-color: rgba(0,0,0,0.2); 
+}

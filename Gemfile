@@ -52,3 +52,4 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'simple_form', '~> 3.4'
 gem 'faker', '~> 1.7', '>= 1.7.3'
 gem 'scoped_search', '~> 4.1'
+gem "font-awesome-rails"

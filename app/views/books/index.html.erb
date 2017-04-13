@@ -5,7 +5,7 @@
     <h1><%= link_to book.title, book_path(book) %></h1>
     <i><%= book.author %></i><br /> 
     <%= book.genre %>, &nbsp;<%= book.classification %>
-    <p><%= book.year %> </p>
+    <p><%= book.fiction %> <%= book.year %> </p>
 		<br />
   </div>
 <% end %>

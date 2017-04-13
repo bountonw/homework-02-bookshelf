@@ -1,6 +1,10 @@
 class BooksController < ApplicationController
 	def index
-		@books = Book.all
+		if params[:q].present?
+			@books = Book.where("title LIKE ?", "%#{params[:q]}%")
+		else
+		  @books = Book.all
+    end
 	end	
 
 	def new
@@ -37,7 +41,7 @@ class BooksController < ApplicationController
 	private
 
 	def book_params
-		params.require(:book).permit(:title, :author, :genre, :classification, :year)
+		params.require(:book).permit(:title, :author, :genre, :classification, :fiction, :year)
 	end
 
 end
